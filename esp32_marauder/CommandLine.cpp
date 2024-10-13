@@ -12,6 +12,7 @@ void CommandLine::RunSetup() {
   Serial.println(F("         ESP32 Marauder      \n"));
   Serial.println("            " + version_number + "\n");
   Serial.println(F("       By: justcallmekoko\n"));
+  Serial.println(F("       Compiled by MXZZ \n"));
   Serial.println(F("--------------------------------\n\n"));
   
   Serial.print("> ");

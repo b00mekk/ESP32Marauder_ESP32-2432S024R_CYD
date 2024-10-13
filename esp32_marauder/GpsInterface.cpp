@@ -8,7 +8,6 @@ char nmeaBuffer[100];
 
 MicroNMEA nmea(nmeaBuffer, sizeof(nmeaBuffer));
 
-HardwareSerial Serial2(GPS_SERIAL_INDEX);
 
 void GpsInterface::begin() {
 
@@ -25,25 +24,15 @@ void GpsInterface::begin() {
   #endif
 
   
-  Serial2.begin(9600, SERIAL_8N1, GPS_TX, GPS_RX);
 
-  MicroNMEA::sendSentence(Serial2, "$PSTMSETPAR,1201,0x00000042");
-  MicroNMEA::sendSentence(Serial2, "$PSTMSAVEPAR");
-
-  MicroNMEA::sendSentence(Serial2, "$PSTMSRR");
+ 
 
   delay(3900);
 
-  if (Serial2.available()) {
-    Serial.println("GPS Attached Successfully");
-    this->gps_enabled = true;
-    while (Serial2.available())
-      Serial2.read();
-  }
-  else {
+
     this->gps_enabled = false;
     Serial.println("GPS Not Found");
-  }
+  
   
 
   this->type_flag=GPSTYPE_NATIVE; //enforce default
@@ -316,7 +305,6 @@ void GpsInterface::flush_queue_textin(){
 }
 
 void GpsInterface::sendSentence(const char* sentence){
-  MicroNMEA::sendSentence(Serial2, sentence);
 }
 
 void GpsInterface::sendSentence(Stream &s, const char* sentence){
@@ -643,21 +631,6 @@ String GpsInterface::getNmeaNotparsed() {
 }
 
 void GpsInterface::main() {
-  while (Serial2.available()) {
-    //Fetch the character one by one
-    char c = Serial2.read();
-    //Serial.print(c);
-    //Pass the character to the library
-    nmea.process(c);
-  }
 
-  uint8_t num_sat = nmea.getNumSatellites();
-
-  if ((nmea.isValid()) && (num_sat > 0))
-    this->setGPSInfo();
-
-  else if ((!nmea.isValid()) && (num_sat <= 0)) {
-    this->setGPSInfo();
-  }
 }
 #endif
