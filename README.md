@@ -14,3 +14,5 @@ ESP32 with 2.4inch 240*320 LCD TFT Module and Touch
 # Pre-build binaries
 1. visit the flasher page https://esp.huhn.me/
 2. Flash the binaries included in the /binaries/ folder in this order 1. partitions, 2.bootloader. 3. bins
+ example
+![immagine](https://github.com/user-attachments/assets/b1dead25-7606-485b-9831-5a0921b3bc0e)
