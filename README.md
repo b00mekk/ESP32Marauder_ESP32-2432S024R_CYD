@@ -2,7 +2,7 @@
 
 ESP32 with 2.4-inch 240x320 LCD TFT Module and Touch 📺👆
 
-![ESP32-2432S024R](https://github.com/b00mekk/ESP32-Marauder-ESP32-2432S024R/blob/main/ESP32-Arduino-LVGL-WIFI-Bluetooth-Development-Board-2-4-240-320-Smart-Display-Screen-2-4inch.jpg_.png?raw=true)
+![ESP32-2432S024R](https://github.com/Asmodeux2/ESP32Marauder_ESP32-2432S024R_CYD/blob/main/marauder.jpg)
 
 ## Tested on:
 - [Module 1](https://s.click.aliexpress.com/e/_DD5uQKp) 🛒🌟
@@ -29,8 +29,9 @@ ESP32 with 2.4-inch 240x320 LCD TFT Module and Touch 📺👆
      1. **Bootloader** - Address: `0x1000` 🔑
      2. **Partitions** - Address: `0x8000` 🗄️
      3. **ESP32 Marauder Bin** - Address: `0x10000` 💽
+![Flashing Process](https://github.com/user-attachments/assets/b1dead25-7606-485b-9831-5a0921b3bc0e)
 
 3. **Alternative Flashing Method**:
    - You can also use the **ESP32 Flash Download Tool** to flash the binaries. 🛠️💻
 
-![Flashing Process](https://github.com/user-attachments/assets/b1dead25-7606-485b-9831-5a0921b3bc0e)
+![Flashing Process](https://github.com/Asmodeux2/ESP32Marauder_ESP32-2432S024R_CYD/blob/main/flash_tool.png)
