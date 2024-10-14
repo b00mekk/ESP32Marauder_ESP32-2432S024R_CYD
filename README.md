@@ -13,6 +13,8 @@ ESP32 with 2.4inch 240*320 LCD TFT Module and Touch
 
 # Pre-build binaries
 1. visit the flasher page https://esp.huhn.me/
-2. Flash the binaries included in the **esp32_marauder\build\esp32.esp32.d32_pro/**  folder in this order 1. partitions, 2.bootloader. 3. bins
- example
+2. Flash the binaries included in the **esp32_marauder\build\esp32.esp32.d32_pro/**  folder in this order
+   2.1. Bootloader - 0x1000
+   2.2. Partitions - 0x8000
+   2.3. ESP32 Marauder Bin - 0x10000
 ![immagine](https://github.com/user-attachments/assets/b1dead25-7606-485b-9831-5a0921b3bc0e)
