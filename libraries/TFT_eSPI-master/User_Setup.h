@@ -23,7 +23,7 @@
 // 2 lines try both options, one of the options should correct the inversion.
 
 // #define TFT_INVERSION_ON
-// #define TFT_INVERSION_OFF
+#define TFT_INVERSION_OFF
 
 
 
